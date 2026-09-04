@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e9e3d5;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+.halaman {
+    width: 100%;
+    max-width: 760px;
+    background: #f8f3e8;
+    padding: 30px 38px;
+}
+
+.garis-ganda {
+    border-top: 5px solid #111;
+    border-bottom: 3px solid #111;
+    height: 15px;
+    margin-bottom: 15px;
+}
+
+.judul-utama {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.byline {
+    border-top: 3px solid #111;
+    border-bottom: 3px solid #111;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+.titik {
+    font-size: 9px;
+}
+
+.bagian-atas {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 12px;
+}
+
+.headline-area {
+    flex: 1;
+}
+
+.headline {
+    font-size: 26px;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.garis-headline {
+    border-top: 3px solid #111;
+    margin-bottom: 10px;
+}
+
+.foto-profil {
+    width: 265px;
+    height: 265px;
+    object-fit: cover;
+}
+
+.paragraf-pembuka,
+.isi-dua-kolom p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.pemisah {
+    border: 0;
+    border-top: 2px solid #111;
+    margin: 15px 0;
+}
+
+.isi-dua-kolom {
+    display: flex;
+    gap: 28px;
+}
+
+.kolom {
+    width: 50%;
+}
+
+.judul-bagian {
+    font-size: 20px;
+    border-bottom: 2px solid #111;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+}
+
+.isi-dua-kolom p:first-of-type::first-letter {
+    font-size: 38px;
+    font-weight: bold;
+    float: left;
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+.kredit {
+    text-align: right;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+    .halaman {
+        padding: 20px;
+    }
+
+    .judul-utama {
+        font-size: 30px;
+    }
+
+    .bagian-atas,
+    .isi-dua-kolom {
+        flex-direction: column;
+    }
+
+    .foto-profil {
+        width: 100%;
+        height: 300px;
+    }
+
+    .kolom {
+        width: 100%;
+    }
+
+    .byline {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Portofolio Saya</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navigasi -->
+  <nav>
+    <div class="container">
+      <div class="logo">MyPortofolio</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Ganti mode gelap">🌙</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header Halaman -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Hubungi Saya Sekarang Juga</h1>
+      <p>Ada pertanyaan atau ingin berkolaborasi atau ingin tahu lebih banyak? Kirim pesan di bawah ini</p>
+    </div>
+  </header>
+
+  <!-- Konten Contact -->
+  <section class="contact-section">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h2>Info Kontak</h2>
+        <p>Hallo teman teman semuanya!! Silakan hubungi saya melalui salah satu kanal berikut, atau isi form di samping.</p>
+
+        <div class="contact-detail">
+          <span class="icon">📧</span>
+          <span>layaandini@email.com</span>
+        </div>
+        <div class="contact-detail">
+          <span class="icon">📱</span>
+          <span>0899-0667-362</span>
+        </div>
+        <div class="contact-detail">
+          <span class="icon">📍</span>
+          <span>Pontianak, Kalimantan Barat</span>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Nama</label>
+          <input type="text" id="name" name="name" placeholder="Nama lengkap kamu">
+          <span class="error-message" id="name-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@email.com">
+          <span class="error-message" id="email-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" placeholder="Tulis pesan kamu di sini..."></textarea>
+          <span class="error-message" id="message-error"></span>
+        </div>
+
+        <button type="submit" class="btn">Kirim Pesan</button>
+        <div class="form-success" id="form-success"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 MyPortofolio</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

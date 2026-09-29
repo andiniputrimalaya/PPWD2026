@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion FAQ_H1101251052_Andini Putri Malaya</title>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {font-family: Arial black, sans-serif;color: #ff9393; padding: 30px;
+        }
+        .kotak { max-width: 520px;margin: auto; border: 2px solid #000000; border-radius: 12px; overflow: hidden;
+        }
+        header, footer {background: #ff9393;color: rgb(0, 0, 0);padding: 15px 18px;
+        }
+        header { text-align: right; }
+        header small { display: block; margin-bottom: 6px; }
+        footer { text-align: center; font-size: 15px; }
+
+        main { padding: 16px; }
+        section { margin-bottom: 14px; line-height: 1.6; }
+        h3 { margin-bottom: 8px; }
+
+        .fitur {background: #ff9393;border-left: 6px solid #372121;border-radius: 12px;padding: 14px 16px;
+        }
+        .fitur ul { padding-left: 22px; }
+
+        /* FAQ */
+        .item { border-top: 1px solid #ff9393; }
+
+        .tanya {width: 100%;display: flex;justify-content: space-between;padding: 15px 5px;border: none;background: white;
+            font-size: 16px;font-weight: bold;color: #000000;text-align: left;cursor: pointer;
+        }
+        .ikon { font-size: 22px; }
+
+        .jawab {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.5s ease;
+        }
+        .jawab p { padding: 0 5px 15px; line-height: 1.5; }
+
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .tanya { font-size: 14px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kotak">
+
+        <header>
+            <h3 align = "center">H1101251052 | Andini Putri Malaya</h3>
+            <h2 align = "center">Accordion FAQ </h2>
+        </header>
+
+        <main>
+            <section id="faq_H1101251052"></section>
+        </main>
+
+        <footer>
+            <p>H1101251052 - Andini Putri Malaya</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Data FAQ disimpan dalam array
+        const dataFaq_H1101251052 = [
+            { q: "Apa itu HTML?", a: "HTML digunakan untuk membuat struktur atau isi dari sebuah halaman website." },
+            { q: "Apa itu CSS?", a: "CSS adalah bahasa yang digunakan untuk mengatur tampilan dan tata letak halaman web yang dibuat dengan HTML." },
+            { q: "Apa itu JavaScript?", a: "JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif dan dinamis." },
+            { q: "Apa itu Accordion?", a: "Accordion adalah komponen yang memungkinkan pengguna  membuka dan menutup suatu informasi." },
+            { q: "Apa fungsi array?", a: "Array digunakan untuk menyimpan beberapa data dalam satu variabel." }
+        ];
+        const wadahFaq_H1101251052 = document.getElementById("faq_H1101251052");
+
+        // perulangan, buat satu item FAQ untuk setiap data di array
+        dataFaq_H1101251052.forEach(function (item) {
+            wadahFaq_H1101251052.innerHTML += `
+                <div class="item">
+                    <button class="tanya">
+                        <span>${item.q}</span>
+                        <span class="ikon">+</span>
+                    </button>
+                    <div class="jawab"><p>${item.a}</p></div>
+                </div>`;
+        });
+
+        // event klik, tutup semua dulu, lalu buka yang diklik 
+        document.querySelectorAll(".tanya").forEach(function (tombol) {
+            tombol.addEventListener("click", function () {
+                const jawab = tombol.nextElementSibling;
+                const sedangBuka = jawab.style.maxHeight !== "";
+
+                document.querySelectorAll(".jawab").forEach(function (j) { j.style.maxHeight = ""; });
+                document.querySelectorAll(".ikon").forEach(function (i) { i.textContent = "+"; });
+
+                if (!sedangBuka) {
+                    jawab.style.maxHeight = jawab.scrollHeight + "px";
+                    tombol.querySelector(".ikon").textContent = "−";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
